@@ -1,0 +1,178 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    background:linear-gradient(135deg,#4f46e5,#3b82f6,#06b6d4);
+    background-size:300% 300%;
+    animation:gradient 10s ease infinite;
+}
+
+@keyframes gradient{
+    0%{
+        background-position:0% 50%;
+    }
+    50%{
+        background-position:100% 50%;
+    }
+    100%{
+        background-position:0% 50%;
+    }
+}
+
+.container{
+    width:420px;
+    padding:45px 35px;
+    text-align:center;
+
+    background:rgba(255,255,255,.18);
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,.25);
+
+    border-radius:25px;
+    box-shadow:0 20px 50px rgba(0,0,0,.25);
+
+    animation:fadeIn .8s ease;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.profile{
+    width:140px;
+    height:140px;
+    border-radius:50%;
+    object-fit:cover;
+    border:5px solid white;
+    padding:5px;
+    background:#fff;
+    transition:.4s;
+}
+
+.profile:hover{
+    transform:scale(1.08) rotate(5deg);
+}
+
+h1{
+    margin-top:20px;
+    font-size:42px;
+    font-weight:700;
+
+    background:linear-gradient(90deg,#ffffff,#dbeafe);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.role{
+    margin-top:10px;
+    color:#ffffff;
+    font-size:20px;
+    font-weight:600;
+}
+
+.about{
+    margin-top:25px;
+    line-height:1.8;
+    font-size:16px;
+    color:#f3f4f6;
+}
+
+.skills{
+    margin-top:30px;
+}
+
+.skills span{
+    display:inline-block;
+    margin:6px;
+    padding:8px 18px;
+    border-radius:30px;
+    background:white;
+    color:#2563eb;
+    font-size:14px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.skills span:hover{
+    background:#2563eb;
+    color:white;
+    transform:translateY(-3px);
+}
+
+.github-btn{
+    display:inline-block;
+    margin-top:35px;
+    padding:15px 35px;
+    border-radius:50px;
+
+    background:white;
+    color:#2563eb;
+
+    text-decoration:none;
+    font-size:18px;
+    font-weight:600;
+
+    transition:.35s;
+}
+
+.github-btn:hover{
+    transform:translateY(-5px);
+    background:#111827;
+    color:white;
+    box-shadow:0 15px 35px rgba(0,0,0,.35);
+}
+
+.socials{
+    margin-top:30px;
+}
+
+.socials a{
+    color:white;
+    font-size:30px;
+    margin:0 12px;
+    transition:.3s;
+}
+
+.socials a:hover{
+    color:#facc15;
+    transform:translateY(-5px);
+}
+
+@media(max-width:500px){
+
+    .container{
+        width:90%;
+        padding:35px 25px;
+    }
+
+    h1{
+        font-size:34px;
+    }
+
+    .role{
+        font-size:18px;
+    }
+
+    .about{
+        font-size:15px;
+    }
+
+}
